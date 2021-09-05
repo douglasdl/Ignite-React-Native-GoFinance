@@ -105,6 +105,11 @@ expo install expo-app-loading
 yarn add react-native-responsive-fontsize
 ```
 
+[React Native iPhone X Helper](https://github.com/ptelad/react-native-iphone-x-helper)
+```sh
+yarn add react-native-iphone-x-helper
+```
+
 ## 🔖 Layout
 
 The basic layout project can be accessed in [this link](https://www.figma.com/community/file/1009807319507822993/Origin-Six) in your [Figma](https://figma.com) account.
