@@ -46,6 +46,7 @@ Sample Images
 - [Random User Generator](https://randomuser.me/)
 
 Icons
+- [Icons Expo FYI](https://icons.expo.fyi)
 - [IcoMoon App](https://icomoon.io/app/#/select)
 - [FlatIcon](https://www.flaticon.com/br/)
 - [IconFinder](https://www.iconfinder.com/)
@@ -99,7 +100,10 @@ expo install expo-font @expo-google-fonts/poppins
 ```sh
 expo install expo-app-loading
 ```
-
+[Responsive Font Size React Native](https://www.npmjs.com/package/react-native-responsive-fontsize)
+```sh
+yarn add react-native-responsive-fontsize
+```
 
 ## 🔖 Layout
 
