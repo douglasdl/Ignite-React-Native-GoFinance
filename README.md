@@ -32,11 +32,12 @@ This project was developped using the following technologies:
 </p>
 
 📚 Libraries
+- [Styled Components](https://styled-components.com)
 - [Google Fonts](https://fonts.google.com/)
+
 - [SwiperJS](https://swiperjs.com/) or [SwipeJS (Github)](https://github.com/nolimits4web/Swiper)
 - [ScrollRevel](https://scrollrevealjs.org)
 - [Scroll Reveal](https://scrollrevealjs.org/)
-- [Styled Components](https://styled-components.com)
 
 🛠 Utilities
 
@@ -89,6 +90,16 @@ yarn add styled-components
 ```sh
 yarn add @types/styled-components-react-native -D
 ```
+
+Install Google Fonts
+```sh
+expo install expo-font @expo-google-fonts/poppins
+```
+
+```sh
+expo install expo-app-loading
+```
+
 
 ## 🔖 Layout
 
