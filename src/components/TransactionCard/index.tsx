@@ -16,6 +16,7 @@ interface Category {
 }
 
 interface Data {
+    type: 'positive' | 'negative';
     title: string;
     amount: string;
     category: Category;
@@ -29,16 +30,25 @@ interface Props {
 export function TransactionCard({ data }: Props) {
     return (
         <Container>
-            <Title>{data.title}</Title>
+            <Title>
+                {data.title}
+            </Title>
 
-            <Amount>{data.amount}</Amount>
+            <Amount type={data.type}>
+                { data.type === 'negative' && '- ' }
+                {  data.amount }
+            </Amount>
 
             <Footer>
                 <Category>
                     <Icon name={data.category.icon}/>
-                    <CategoryName>{data.category.name}</CategoryName>
+                    <CategoryName>
+                        {data.category.name}
+                    </CategoryName>
                 </Category>
-                <Date>{data.date}</Date>
+                <Date>
+                    {data.date}
+                </Date>
             </Footer>
         </Container>
     );
