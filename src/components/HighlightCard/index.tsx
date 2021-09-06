@@ -7,7 +7,7 @@ import {
     Icon,
     Footer,
     Amount,
-    LastTransaction 
+    LastTransaction
 } from "./styles";
 
 interface Props {
@@ -36,6 +36,8 @@ export function HighlightCard({title, type, amount, lastTransaction}: Props) {
                     {lastTransaction}
                 </LastTransaction>
             </Footer>
+
+            
         </Container>
     );
 }

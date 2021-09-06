@@ -112,7 +112,7 @@ yarn add react-native-iphone-x-helper
 
 ## 🔖 Layout
 
-The basic layout project can be accessed in [this link](https://www.figma.com/community/file/1009807319507822993/Origin-Six) in your [Figma](https://figma.com) account.
+The basic layout project can be accessed in [this link](https://www.figma.com/file/oCOd1RWa6ByXxkG4ZVUvzC/GoFinances-Ignite) in your [Figma](https://figma.com) account.
 
 ## 💻 IDE
 This project was done using [Visual Studio Code](https://code.visualstudio.com/) IDE.
