@@ -110,6 +110,11 @@ yarn add react-native-responsive-fontsize
 yarn add react-native-iphone-x-helper
 ```
 
+[React Hook Form](https://react-hook-form.com/)
+```sh
+yarn add react-hook-form
+```
+
 ## 🔖 Layout
 
 The basic layout project can be accessed in [this link](https://www.figma.com/file/oCOd1RWa6ByXxkG4ZVUvzC/GoFinances-Ignite) in your [Figma](https://figma.com) account.
