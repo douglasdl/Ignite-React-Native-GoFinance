@@ -119,6 +119,22 @@ Form Validation
 yarn add @hookform/resolvers yup
 ```
 
+[React Navigation](https://reactnavigation.org/)
+
+Installation
+```sh
+yarn add @react-navigation/native
+```
+
+Dependencies for bare project
+```sh
+yarn add react-native-screens react-native-safe-area-context
+```
+For Mac OS
+```sh
+npx pod-install ios
+```
+
 ## 🔖 Layout
 
 The basic layout project can be accessed in [this link](https://www.figma.com/file/oCOd1RWa6ByXxkG4ZVUvzC/GoFinances-Ignite) in your [Figma](https://figma.com) account.
