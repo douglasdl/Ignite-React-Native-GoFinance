@@ -114,6 +114,10 @@ yarn add react-native-iphone-x-helper
 ```sh
 yarn add react-hook-form
 ```
+Form Validation
+```sh
+yarn add @hookform/resolvers yup
+```
 
 ## 🔖 Layout
 
