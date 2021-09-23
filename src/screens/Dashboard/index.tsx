@@ -57,6 +57,61 @@ export function Dashboard() {
             },
             date: "10/04/2021"
         },
+        {
+            id: 4,
+            type: 'positive',
+            title: "Dividendos - AESB3",
+            amount: "R$18,15",
+            category: {
+                name: "Ações",
+                icon: "dollar-sign"
+            },
+            date: "22/09/2021"
+        },
+        {
+            id: 5,
+            type: 'positive',
+            title: "Aluguel (BTC) - VIIA3",
+            amount: "R$0,33",
+            category: {
+                name: "Ações",
+                icon: "dollar-sign"
+            },
+            date: "22/09/2021"
+        },
+        {
+            id: 6,
+            type: 'positive',
+            title: "Aluguel (BTC) - VIIA3",
+            amount: "R$0,04",
+            category: {
+                name: "Ações",
+                icon: "dollar-sign"
+            },
+            date: "21/09/2021"
+        },
+        {
+            id: 7,
+            type: 'positive',
+            title: "Venda - Tesouro Direto",
+            amount: "R$0,00",
+            category: {
+                name: "Renda Fixa",
+                icon: "dollar-sign"
+            },
+            date: "21/09/2021"
+        },
+        {
+            id: 6,
+            type: 'positive',
+            title: "Aluguel (BTC) - VIIA3",
+            amount: "R$0,13",
+            category: {
+                name: "Ações",
+                icon: "dollar-sign"
+            },
+            date: "20/09/2021"
+        },
     ];
     return (
         <Container>

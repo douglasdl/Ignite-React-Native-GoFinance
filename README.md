@@ -135,6 +135,33 @@ For Mac OS
 npx pod-install ios
 ```
 
+Install Bottom Tabs
+```sh
+yarn add @react-navigation/bottom-tabs
+```
+
+Solve Bug
+```sh
+expo install react-native-safe-area-context
+expo install react-native-screens   
+```
+
+
+Update all programs
+```sh
+npm r -g watchman
+brew update && brew upgrade
+brew install watchman
+```
+
+Desinstalar arquivos duplicados
+```sh
+npm dedupe
+```
+```sh
+
+```
+
 ## 🔖 Layout
 
 The basic layout project can be accessed in [this link](https://www.figma.com/file/oCOd1RWa6ByXxkG4ZVUvzC/GoFinances-Ignite) in your [Figma](https://figma.com) account.
