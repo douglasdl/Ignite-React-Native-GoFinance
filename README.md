@@ -167,6 +167,12 @@ npm dedupe
 yarn add react-native-gesture-handler
 ```
 
+[AsyncStorage](https://docs.expo.dev/versions/latest/sdk/async-storage/)
+```sh
+expo install @react-native-async-storage/async-storage
+```
+
+
 
 ## 🔖 Layout
 
