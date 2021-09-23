@@ -162,6 +162,12 @@ npm dedupe
 
 ```
 
+[react-native-gesture-handler](https://docs.swmansion.com/react-native-gesture-handler/docs/)
+```sh
+yarn add react-native-gesture-handler
+```
+
+
 ## 🔖 Layout
 
 The basic layout project can be accessed in [this link](https://www.figma.com/file/oCOd1RWa6ByXxkG4ZVUvzC/GoFinances-Ignite) in your [Figma](https://figma.com) account.

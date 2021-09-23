@@ -11,6 +11,7 @@ import {
     User,
     UserGreeting,
     Username,
+    LogoutButton,
     Icon,
     HighlightCards,
     Transactions,
@@ -102,7 +103,7 @@ export function Dashboard() {
             date: "21/09/2021"
         },
         {
-            id: 6,
+            id: 8,
             type: 'positive',
             title: "Aluguel (BTC) - VIIA3",
             amount: "R$0,13",
@@ -124,7 +125,9 @@ export function Dashboard() {
                             <Username>Douglas</Username>
                         </User>
                     </UserInfo>
-                    <Icon name="power"/>
+                    <LogoutButton onPress={() => {}}>
+                        <Icon name="power"/>
+                    </LogoutButton>
                 </UserWrapper>   
             </Header>
 
