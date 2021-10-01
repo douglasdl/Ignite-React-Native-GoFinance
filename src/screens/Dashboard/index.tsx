@@ -113,6 +113,83 @@ export function Dashboard() {
             },
             date: "20/09/2021"
         },
+        {
+            id: 9,
+            type: 'positive',
+            title: "Aluguel (BTC) - VIIA3",
+            amount: "R$0,02",
+            category: {
+                name: "Ações",
+                icon: "dollar-sign"
+            },
+            date: "23/09/2021"
+        },
+        {
+            id: 10,
+            type: 'positive',
+            title: "Aluguel (BTC) - VIIA3",
+            amount: "R$0,84",
+            category: {
+                name: "Ações",
+                icon: "dollar-sign"
+            },
+            date: "24/09/2021"
+        },
+        {
+            id: 11,
+            type: 'positive',
+            title: "Dividendos - XPIN11",
+            amount: "R$20,16",
+            category: {
+                name: "FIIs",
+                icon: "dollar-sign"
+            },
+            date: "24/09/2021"
+        },
+        {
+            id: 12,
+            type: 'positive',
+            title: "Aluguel (BTC) - VIIA3",
+            amount: "R$0,88",
+            category: {
+                name: "Ações",
+                icon: "dollar-sign"
+            },
+            date: "28/09/2021"
+        },
+        {
+            id: 13,
+            type: 'positive',
+            title: "Juros sobre Capital (JCP) - BRDT3",
+            amount: "R$85,09",
+            category: {
+                name: "Ações",
+                icon: "dollar-sign"
+            },
+            date: "29/09/2021"
+        },
+        {
+            id: 14,
+            type: 'positive',
+            title: "Juros sobre Capital (JCP) - BBAS3",
+            amount: "R$125,62",
+            category: {
+                name: "Ações",
+                icon: "dollar-sign"
+            },
+            date: "30/09/2021"
+        },
+        {
+            id: 15,
+            type: 'positive',
+            title: "Dividendos - ITUB4",
+            amount: "R$9,00",
+            category: {
+                name: "Ações",
+                icon: "dollar-sign"
+            },
+            date: "30/09/2021"
+        },
     ];
     return (
         <Container>

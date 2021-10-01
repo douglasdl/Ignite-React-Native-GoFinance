@@ -171,7 +171,7 @@ yarn add react-native-gesture-handler
 ```sh
 expo install @react-native-async-storage/async-storage
 ```
-
+[React Native UUID](https://www.npmjs.com/package/react-native-uuid)
 
 
 ## 🔖 Layout
