@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import { HighlightCard } from '../../components/HighlightCard';
 import { TransactionCard, TransactionCardProps } from '../../components/TransactionCard';
+
+import { useFocusEffect } from '@react-navigation/native';
 
 import { 
     Container, 
@@ -245,8 +247,20 @@ export function Dashboard() {
 
     // The depencies arrays is empty to load the list only once
     useEffect(() => {
+        // Change this to true if need to clear all data (for tests and debug)
+        const wannaClearData = false;
+        if(wannaClearData) {
+            const dataKey = '@gofinances:transactions';
+            AsyncStorage.removeItem(dataKey);
+        }
+        
         loadTransactions();
     },[]);
+
+
+    useFocusEffect(useCallback(() => {
+        loadTransactions();
+    },[]));
 
     return (
         <Container>
