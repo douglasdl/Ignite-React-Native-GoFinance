@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
 import { HighlightCard } from '../../components/HighlightCard';
 import { TransactionCard, TransactionCardProps } from '../../components/TransactionCard';
 
@@ -24,6 +26,10 @@ export interface DataListProps extends TransactionCardProps {
 }
 
 export function Dashboard() {
+
+    const [data, setData] = useState<DataListProps[]>();
+
+    /* 
     const data: DataListProps[] = [
         {
             id: 1,
@@ -190,7 +196,58 @@ export function Dashboard() {
             },
             date: "30/09/2021"
         },
+        {
+            id: 16,
+            type: 'positive',
+            title: "Juros sobre Capital (JCP) - POMO4",
+            amount: "R$17,85",
+            category: {
+                name: "Ações",
+                icon: "dollar-sign"
+            },
+            date: "04/04/2022"
+        },
     ];
+    */
+
+    async function loadTransactions() {
+        const dataKey = '@gofinances:transactions';
+        const response = await AsyncStorage.getItem(dataKey);
+        const transactions = response ? JSON.parse(response) : [];
+
+        const transactionsFormatted:DataListProps[] = transactions
+        .map((item:DataListProps) => {
+            const amount = Number(item.amount).toLocaleString('pt-BR', {
+                style: 'currency',
+                currency: 'BRL',
+            });
+
+            // 2-digit, numeric, narrow, short e long
+            const date = Intl.DateTimeFormat('pt-BR', {
+                day: '2-digit',
+                month: '2-digit',
+                year: 'numeric'
+            }).format(new Date(item.date));
+
+            return {
+                id: item.id,
+                name: item.name,
+                amount,
+                date,
+                type: item.type,
+                category: item.category,
+            }
+
+        });
+
+        setData(transactionsFormatted);
+    }
+
+    // The depencies arrays is empty to load the list only once
+    useEffect(() => {
+        loadTransactions();
+    },[]);
+
     return (
         <Container>
             <Header>

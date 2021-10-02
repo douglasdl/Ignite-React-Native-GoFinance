@@ -13,6 +13,9 @@ import theme from './src/global/styles/theme'; './src/global/styles/theme';
 
 import { AppRoutes } from './src/routes/app.routes';
 import { NavigationContainer } from '@react-navigation/native';
+import 'intl';
+import 'intl/locale-data/jsonp/pt-BR';
+
 
 export default function App() {
     const [fontsLoaded] = useFonts({
