@@ -3,6 +3,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { HistoryCard } from "../../components/HistoryCard";
 import { categories } from "../../utils/categories";
 import { VictoryPie } from 'victory-native';
+import { useBottomTabBarHeight } from '@react-navigation/bottom-tabs';
 
 import { 
     Container,
@@ -10,6 +11,11 @@ import {
     Title,
     Content,
     ChartContainer,
+    MonthSelect,
+    MonthSelectButton,
+    MonthSelectIcon,
+    Month,
+
 } from "./styles";
 import { RFValue } from "react-native-responsive-fontsize";
 import theme from "../../global/styles/theme";
@@ -88,7 +94,31 @@ export function Summary() {
                 <Title>Resumo por Categoria</Title>
             </Header>
 
-            <Content>
+            <Content
+                contentContainerStyle={{ 
+                    paddingHorizontal: 24, 
+                    paddingBottom: useBottomTabBarHeight(),
+                }}
+                showsVerticalScrollIndicator={false}
+            >
+                <MonthSelect>
+                    <MonthSelectButton>
+                        <MonthSelectIcon 
+                            name="chevron-left"
+                        />
+                    </MonthSelectButton>
+
+                    <Month>
+                        Outubro
+                    </Month>
+
+                    <MonthSelectButton>
+                        <MonthSelectIcon 
+                            name="chevron-right"
+                        />
+                    </MonthSelectButton> 
+                </MonthSelect>
+
                 <ChartContainer>
                     <VictoryPie 
                         data={totalByCategories}

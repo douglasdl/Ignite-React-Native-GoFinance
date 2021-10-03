@@ -228,7 +228,7 @@ export function Dashboard() {
     */
 
     function getLastTransactionDate(collection:DataListProps[], type: 'positive' | 'negative' | 'all') {
-        let lastTransaction;
+        let lastTransaction = new Date();
         if(type === 'all') {
             lastTransaction = new Date(
                 Math.max.apply(Math, collection
