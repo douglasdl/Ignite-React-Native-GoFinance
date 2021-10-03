@@ -181,6 +181,13 @@ Need to install for Android compatibility with Intl for data format
 yarn add intl
 ```
 
+[Victory.js](https://formidable.com/open-source/victory/docs/victory-pie): React.js components for modular charting and data visualization.
+Installation
+```sh
+yarn add victory-native
+yarn add react-native-svg
+```
+
 
 ## 🔖 Layout
 
