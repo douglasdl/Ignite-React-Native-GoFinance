@@ -193,6 +193,10 @@ yarn add react-native-svg
 yarn add date-fns
 ```
 
+[react-native-svg-transformer](https://github.com/kristerkari/react-native-svg-transformer)
+```sh
+yarn add --dev react-native-svg-transformer
+```
 
 ## 🔖 Layout
 
@@ -208,6 +212,7 @@ This project was done using [Visual Studio Code](https://code.visualstudio.com/)
 - [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)
 - [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode#:~:text=Prettier%20is%20an%20opinionated%20code,account%2C%20wrapping%20code%20when%20necessary.)
 - [vscode-styled-components](https://marketplace.visualstudio.com/items?itemName=jpoissonnier.vscode-styled-components)
+- [Svg Preview](https://marketplace.visualstudio.com/items?itemName=SimonSiefke.svg-preview)
 
 ### ⚙ VS Code Configuration
 

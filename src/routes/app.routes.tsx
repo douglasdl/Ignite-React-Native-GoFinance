@@ -37,6 +37,7 @@ export function AppRoutes() {
                             color={color}
                         />
                     ))
+                    
                 }}
             />
 
