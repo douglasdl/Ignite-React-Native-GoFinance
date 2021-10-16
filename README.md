@@ -188,6 +188,11 @@ yarn add victory-native
 yarn add react-native-svg
 ```
 
+[Date FNS](https://date-fns.org/): Modern JavaScript date utility library.
+```sh
+yarn add date-fns
+```
+
 
 ## 🔖 Layout
 

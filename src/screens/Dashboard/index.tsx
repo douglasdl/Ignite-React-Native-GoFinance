@@ -46,186 +46,189 @@ export function Dashboard() {
     const [transactions, setTransactions] = useState<DataListProps[]>([]);
     const [highlightData, setHighlightData] = useState<HighlightData>({} as HighlightData);
 
-    /* 
+    /*
     const data: DataListProps[] = [
         {
-            id: 1,
+            id: '1',
             type: 'positive',
-            title: "Desenvolvimento de Site",
+            name: "Desenvolvimento de Site",
             amount: "R$12.000,00",
             category: {
                 name: "Vendas",
-                icon: "dollar-sign"
             },
             date: "13/04/2021"
         },
         {
-            id: 2,
+            id: '2',
             type: 'negative',
-            title: "Mc Donalds",
+            name: "Mc Donalds",
             amount: "R$59,00",
-            category: {
-                name: "Alimentação",
-                icon: "coffee"
-            },
+            category: "Alimentação",
             date: "10/04/2021"
         },
         {
-            id: 3,
+            id: '3',
             type: 'negative',
-            title: "Aluguel do Apartamento",
+            name: "Aluguel do Apartamento",
             amount: "R$1.200,00",
-            category: {
-                name: "Casa",
-                icon: "home"
-            },
+            category: "Casa",
             date: "10/04/2021"
         },
         {
-            id: 4,
+            id: '4',
             type: 'positive',
-            title: "Dividendos - AESB3",
+            name: "Dividendos - AESB3",
             amount: "R$18,15",
-            category: {
-                name: "Ações",
-                icon: "dollar-sign"
-            },
+            category: "Ações",
             date: "22/09/2021"
         },
         {
-            id: 5,
+            id: '5',
             type: 'positive',
-            title: "Aluguel (BTC) - VIIA3",
+            name: "Aluguel (BTC) - VIIA3",
             amount: "R$0,33",
-            category: {
-                name: "Ações",
-                icon: "dollar-sign"
-            },
+            category: "Ações",
             date: "22/09/2021"
         },
         {
-            id: 6,
+            id: '6',
             type: 'positive',
-            title: "Aluguel (BTC) - VIIA3",
+            name: "Aluguel (BTC) - VIIA3",
             amount: "R$0,04",
-            category: {
-                name: "Ações",
-                icon: "dollar-sign"
-            },
+            category: "Ações",
             date: "21/09/2021"
         },
         {
-            id: 7,
+            id: '7',
             type: 'positive',
-            title: "Venda - Tesouro Direto",
+            name: "Venda - Tesouro Direto",
             amount: "R$0,00",
-            category: {
-                name: "Renda Fixa",
-                icon: "dollar-sign"
-            },
+            category: "Renda Fixa",
             date: "21/09/2021"
         },
         {
-            id: 8,
+            id: '8',
             type: 'positive',
-            title: "Aluguel (BTC) - VIIA3",
+            name: "Aluguel (BTC) - VIIA3",
             amount: "R$0,13",
-            category: {
-                name: "Ações",
-                icon: "dollar-sign"
-            },
+            category: "Ações",
             date: "20/09/2021"
         },
         {
-            id: 9,
+            id: '9',
             type: 'positive',
-            title: "Aluguel (BTC) - VIIA3",
+            name: "Aluguel (BTC) - VIIA3",
             amount: "R$0,02",
-            category: {
-                name: "Ações",
-                icon: "dollar-sign"
-            },
+            category: "Ações",
             date: "23/09/2021"
         },
         {
-            id: 10,
+            id: '10',
             type: 'positive',
-            title: "Aluguel (BTC) - VIIA3",
+            name: "Aluguel (BTC) - VIIA3",
             amount: "R$0,84",
-            category: {
-                name: "Ações",
-                icon: "dollar-sign"
-            },
+            category: "Ações",
             date: "24/09/2021"
         },
         {
-            id: 11,
+            id: '11',
             type: 'positive',
-            title: "Dividendos - XPIN11",
+            name: "Dividendos - XPIN11",
             amount: "R$20,16",
-            category: {
-                name: "FIIs",
-                icon: "dollar-sign"
-            },
+            category: "FIIs",
             date: "24/09/2021"
         },
         {
-            id: 12,
+            id: '12',
             type: 'positive',
-            title: "Aluguel (BTC) - VIIA3",
+            name: "Aluguel (BTC) - VIIA3",
             amount: "R$0,88",
-            category: {
-                name: "Ações",
-                icon: "dollar-sign"
-            },
+            category: "Ações",
             date: "28/09/2021"
         },
         {
-            id: 13,
+            id: '13',
             type: 'positive',
-            title: "Juros sobre Capital (JCP) - BRDT3",
+            name: "Juros sobre Capital (JCP) - BRDT3",
             amount: "R$85,09",
-            category: {
-                name: "Ações",
-                icon: "dollar-sign"
-            },
+            category: "Ações",
             date: "29/09/2021"
         },
         {
-            id: 14,
+            id: '14',
             type: 'positive',
-            title: "Juros sobre Capital (JCP) - BBAS3",
+            name: "Juros sobre Capital (JCP) - BBAS3",
             amount: "R$125,62",
-            category: {
-                name: "Ações",
-                icon: "dollar-sign"
-            },
+            category: "Ações",
             date: "30/09/2021"
         },
         {
-            id: 15,
+            id: '15',
             type: 'positive',
-            title: "Dividendos - ITUB4",
+            name: "Dividendos - ITUB4",
             amount: "R$9,00",
-            category: {
-                name: "Ações",
-                icon: "dollar-sign"
-            },
+            category: "Ações",
             date: "30/09/2021"
         },
         {
-            id: 16,
+            id: '16',
             type: 'positive',
-            title: "Juros sobre Capital (JCP) - POMO4",
+            name: "Aluguel (BTC) - VIIA3",
+            amount: "R$0,04",
+            category: "Ações",
+            date: "05/10/2021"
+        },
+        {
+            id: '17',
+            type: 'positive',
+            name: "Juros sobre Capital (JCP) - POMO4",
             amount: "R$17,85",
-            category: {
-                name: "Ações",
-                icon: "dollar-sign"
-            },
+            category: "Ações",
             date: "04/04/2022"
+        },
+        {
+            id: '18',
+            type: 'positive',
+            name: "Dividendos - PORD11",
+            amount: "R$51,87",
+            category: "FIIs",
+            date: "07/10/2021"
+        },
+        {
+            id: '19',
+            type: 'positive',
+            name: "Aluguel (BTC) - VIIA3",
+            amount: "R$0,54",
+            category: "Ações",
+            date: "07/10/2021"
+        },
+        {
+            id: '20',
+            type: 'positive',
+            name: "Aluguel (BTC) - BRDT3",
+            amount: "R$0,03",
+            category: "Ações",
+            date: "08/10/2021"
+        },
+        {
+            id: '21',
+            type: 'positive',
+            name: "Dividendos - GGRC11",
+            amount: "R$64,00",
+            category: "FIIs",
+            date: "08/10/2021"
+        },
+        {
+            id: '22',
+            type: 'positive',
+            name: "Aluguel (BTC) - ABEV3",
+            amount: "R$0,42",
+            category: "Ações",
+            date: "14/10/2021"
         },
     ];
     */
+    
 
     function getLastTransactionDate(collection:DataListProps[], type: 'positive' | 'negative' | 'all') {
         let lastTransaction = new Date();
@@ -288,6 +291,8 @@ export function Dashboard() {
         });
 
         setTransactions(transactionsFormatted);
+
+        //setTransactions(data);
 
         const lastIncomeTransaction = getLastTransactionDate(transactions, 'positive');
         const lastExpenseTransaction = getLastTransactionDate(transactions, 'negative');

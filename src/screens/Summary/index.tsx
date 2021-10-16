@@ -1,9 +1,12 @@
 import React, {useEffect, useState} from "react";
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { VictoryPie } from 'victory-native';
+import { addMonths, subMonths, format } from 'date-fns';
+import { ptBR } from 'date-fns/locale';
+
+import { useBottomTabBarHeight } from '@react-navigation/bottom-tabs';
 import { HistoryCard } from "../../components/HistoryCard";
 import { categories } from "../../utils/categories";
-import { VictoryPie } from 'victory-native';
-import { useBottomTabBarHeight } from '@react-navigation/bottom-tabs';
 
 import { 
     Container,
@@ -38,14 +41,29 @@ interface CategoryData {
 }
 
 export function Summary() {
+    const [selectedDate, setSelectedDate] = useState(new Date());
     const [totalByCategories, setTotalByCategories] = useState<CategoryData[]>([]);
+
+    function handleDateChange(action: 'next' | 'prev') {
+        let newDate = new Date();
+        if(action === 'next') {
+            setSelectedDate(addMonths(selectedDate, 1));
+        } else {
+            setSelectedDate(subMonths(selectedDate, 1));
+            
+        }
+    }
 
     async function loadData() {
         const dataKey = '@gofinances:transactions';
         const response = await AsyncStorage.getItem(dataKey); 
         const formatedResponse = response ? JSON.parse(response) : [];
 
-        const expenses = formatedResponse.filter((expense:TrasactionData) => expense.type === 'negative');
+        const expenses = formatedResponse.filter((expense:TrasactionData) => 
+            expense.type === 'negative' && 
+            new Date(expense.date).getMonth() === selectedDate.getMonth() &&
+            new Date(expense.date).getFullYear() === selectedDate.getFullYear()    
+        );
 
         const totalExpenses = expenses.reduce((accumulator:number, expense:TrasactionData) => {
             return accumulator + Number(expense.amount);
@@ -87,7 +105,7 @@ export function Summary() {
 
     useEffect(() => {
         loadData()
-    },[]);
+    },[selectedDate]);
     return (
         <Container>
             <Header>
@@ -102,17 +120,21 @@ export function Summary() {
                 showsVerticalScrollIndicator={false}
             >
                 <MonthSelect>
-                    <MonthSelectButton>
+                    <MonthSelectButton
+                        onPress={() => handleDateChange('prev')}
+                    >
                         <MonthSelectIcon 
                             name="chevron-left"
                         />
                     </MonthSelectButton>
 
                     <Month>
-                        Outubro
+                        { format(selectedDate, 'MMMM, yyyy', {locale: ptBR}) }
                     </Month>
 
-                    <MonthSelectButton>
+                    <MonthSelectButton
+                        onPress={() => handleDateChange('next')}
+                    >
                         <MonthSelectIcon 
                             name="chevron-right"
                         />
@@ -133,6 +155,10 @@ export function Summary() {
                             }
                         }}
                         labelRadius={50}
+                        innerRadius={0}
+                        startAngle={0}
+                        padAngle={1}
+                        radius={150}
                     />
                 </ChartContainer>
                 {

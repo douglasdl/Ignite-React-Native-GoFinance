@@ -52,3 +52,14 @@ buck-out/
 # Expo
 .expo/
 web-build/
+
+
+# Rats
+src/screens/Liabilities/
+src/screens/Assets/
+src/screens/Portifolio/
+src/screens/Balance/
+src/screens/Cashflow/
+src/screens/Incomes/
+src/screens/Expenses/
+src/screens/Game/
