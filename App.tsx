@@ -17,7 +17,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import 'intl';
 import 'intl/locale-data/jsonp/pt-BR';
 import { SignIn } from './src/screens/SignIn';
-import { AuthContext } from './src/AuthContext';
+import { AuthProvider } from './src/hooks/auth';
 
 
 export default function App() {
@@ -35,9 +35,9 @@ export default function App() {
             <NavigationContainer>
                 <StatusBar barStyle="light-content" />
                 
-                <AuthContext.Provider value={[]}>
+                <AuthProvider>
                     <SignIn />
-                </AuthContext.Provider>
+                </AuthProvider>
 
             </NavigationContainer>
         </ThemeProvider>
